@@ -3,11 +3,20 @@ package com.itsajs;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class ProductServiceApplication {
+import lombok.extern.slf4j.Slf4j;
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProductServiceApplication.class, args);
+@Slf4j
+@SpringBootApplication
+public class ProductServiceApplicationMain 
+{
+	public static void main(String[] args) 
+	{
+		log.info("entered in ProductServiceApplicationMain.java main()...");
+		
+		SpringApplication.run(ProductServiceApplicationMain.class, args);
+		
+		log.info("************PRODUCT SERVICE APPLICATION STARTED************");
+		
 	}
 
 }
