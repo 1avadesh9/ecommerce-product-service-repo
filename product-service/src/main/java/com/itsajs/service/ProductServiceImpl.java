@@ -48,6 +48,7 @@ public class ProductServiceImpl implements ProductService
 		productResponseDto.setProductId(product.getProductId());
 		productResponseDto.setProductName(product.getProductName());
 		productResponseDto.setProductDescription(product.getProductDescription());
+		productResponseDto.setProductPrice(product.getProductPrice());
 		productResponseDto.setStockQuantity(product.getStockQuantity());
 		productResponseDto.setInStock(product.getInStock());
 		productResponseDto.setCategoryName(product.getCategory().getCategoryName());
@@ -89,4 +90,13 @@ public class ProductServiceImpl implements ProductService
 	 return convertProductToProductResponseDto(product);
 	}
 
+	public void deleteProductDetailsById(String productId)
+	{
+		log.info("entered in ProductServiceImpl.java deleteProductDetailsById()..."+productId);
+		
+		Product product = this.productRepository.findById(productId).orElseThrow(()-> new RuntimeException("Product not found"));
+		
+		this.productRepository.delete(product);
+	}
+	
 }

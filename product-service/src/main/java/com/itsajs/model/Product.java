@@ -27,7 +27,7 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(exclude = "category")  //prevents printing and StackOverflowError Exception
 @Entity
 @Table(name="TBL_PRODUCT")
 public class Product 

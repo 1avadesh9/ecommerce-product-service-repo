@@ -15,4 +15,6 @@ public interface ProductService
    
    public ProductResponseDto updateStock(String productId, Integer stockQuantity);
    
+   public void deleteProductDetailsById(String productId);
+   
 }
