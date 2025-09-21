@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
 
+import com.itsajs.config.IdGenerator;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -31,24 +33,24 @@ import lombok.ToString;
 public class Product 
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "PRODUCT_ID")
-	private String productId;
+	private String productId;				//used in ProductResponseDto.java
 	
 	@Column(name = "PRODUCT_NAME")
-	private String productName;
+	private String productName;      		//used in ProductRequestDto.java
 	
 	@Column(name = "PRODUCT_DESCRIPTION")
-	private String productDescription;
+	private String productDescription;		//used in ProductRequestDto.java
 	
 	@Column(name = "PRODUCT_PRICE")
-	private Double productPrice;
+	private Double productPrice;			//used in ProductRequestDto.java
 	
 	@Column(name = "STOCK_QUANTITY")
-	private Integer stockQuantity;
+	private Integer stockQuantity;			//used in ProductRequestDto.java
 	
 	@Column(name = "INSTOCK")
-	private Boolean inStock;
+	private Boolean inStock;				//used in ProductResponseDto.java
 	
 	@Column(name = "PRODUCT_CREATED_DT")
 	private LocalDateTime productCreatedDate;
@@ -71,7 +73,10 @@ public class Product
 		   this.productCreatedDate = LocalDateTime.now();
 		   this.productUpdatedDate = LocalDateTime.now();
 	   
-	   
+		if(this.productId == null)
+		{
+		   this.productId = "prod-"+String.format("%05d", IdGenerator.getNextProductId());
+		}
 	   
    }
    
