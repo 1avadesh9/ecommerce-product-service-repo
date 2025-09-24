@@ -1,7 +1,7 @@
 package com.itsajs.mapper;
 
 import com.itsajs.dto.CategoryResponseDto;
-import com.itsajs.model.Category;
+import com.itsajs.entity.Category;
 
 public class CategoryMapping 
 {

@@ -9,10 +9,10 @@ import com.itsajs.dto.CategoryRequestDto;
 import com.itsajs.dto.CategoryResponseDto;
 import com.itsajs.dto.ExtendedCategoryResponseDto;
 import com.itsajs.dto.ProductResponseDto;
+import com.itsajs.entity.Category;
+import com.itsajs.entity.Product;
 import com.itsajs.mapper.CategoryMapping;
 import com.itsajs.mapper.ProductMapping;
-import com.itsajs.model.Category;
-import com.itsajs.model.Product;
 import com.itsajs.repository.CategoryRepository;
 
 import lombok.RequiredArgsConstructor;

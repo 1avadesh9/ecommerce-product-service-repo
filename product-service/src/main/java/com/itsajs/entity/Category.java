@@ -1,4 +1,4 @@
-package com.itsajs.model;
+package com.itsajs.entity;
 
 import java.util.List;
 

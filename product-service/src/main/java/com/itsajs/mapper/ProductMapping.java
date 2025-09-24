@@ -1,7 +1,7 @@
 package com.itsajs.mapper;
 
 import com.itsajs.dto.ProductResponseDto;
-import com.itsajs.model.Product;
+import com.itsajs.entity.Product;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import com.itsajs.dto.ProductRequestDto;
 import com.itsajs.dto.ProductResponseDto;
-import com.itsajs.model.Category;
-import com.itsajs.model.Product;
+import com.itsajs.entity.Category;
+import com.itsajs.entity.Product;
 import com.itsajs.repository.CategoryRepository;
 import com.itsajs.repository.ProductRepository;
 
